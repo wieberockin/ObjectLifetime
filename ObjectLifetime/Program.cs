@@ -12,6 +12,31 @@ namespace ObjectLifetime
         {
             Car myCar = new Car();
 
+            myCar.Make = "Oldsmobile";
+            myCar.Model = "Cutlass Supreme";
+            myCar.Year = 1986;
+            myCar.Color = "Silver";
+
+            Car myOtherCar;
+            //This copies the referenced memory address so that both are referencing the same place
+            myOtherCar = myCar;
+
+            Console.WriteLine("{0} {1} {2} {3}",
+                myOtherCar.Make,
+                myOtherCar.Model,
+                myOtherCar.Year,
+                myOtherCar.Color);
+
+            myOtherCar.Model = "98";
+
+            Console.WriteLine("{0} {1} {2} {3}",
+                myCar.Make,
+                myCar.Model,
+                myCar.Year,
+                myCar.Color);
+
+            Console.ReadLine();
+
         }
     }
 
