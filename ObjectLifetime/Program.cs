@@ -10,8 +10,18 @@ namespace ObjectLifetime
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            Car myCar = new Car();
+
         }
+    }
+
+    class Car
+    {
+        //Use the shortcut "prop" in intellisense and then hit Tab-Tab for the below.
+        //Another option would be propfull for more complete properties
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public string Color { get; set; }
     }
 }
